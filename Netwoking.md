@@ -164,9 +164,10 @@ A **loopback address** is a special IP address that is used to test network inte
    - `10.55.3.0/24`
 4. **Enable Public IP** on subnets.
 5. **Create a routing table** and add the subnets to it.   NOTE: pls make RT as a main and delete old one
-6. **Add routes** to the routing table.
-7. **Create a Linux server** and configure:
+6. **Create an IGW and attach to VPC**
+7. **Add routes** to the routing table.
+8. **Create a Linux server** and configure:
    - Security Group (SG)
    - Key Pair (for SSH access)
-8. **Connect to the Linux Server.**
+9. **Connect to the Linux Server.**
 
