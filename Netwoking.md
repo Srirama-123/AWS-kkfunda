@@ -104,21 +104,16 @@ Each subnet has:
 2. **Broadcast Address** (Last address, e.g., 192.168.1.255)
 3. **Usable Host Addresses** (Between network and broadcast)
 
-### **Example: Subnetting 192.168.1.0/24 into /26**
+### **AWS Reserved IPs in Each Subnet**
+AWS reserves 5 IP addresses (first 4 and last 1) in each subnet. These IPs cannot be assigned to an instance.
 
-#### **Subnet Mask:** 255.255.255.192 (/26) → 4 subnets
+Example: For CIDR block `10.0.0.0/24`, the reserved IPs are:
 
-| Subnet | Network Address | First Host | Last Host | Broadcast |
-|--------|----------------|------------|----------|-----------|
-| 1 | 192.168.1.0 | 192.168.1.1 | 192.168.1.62 | 192.168.1.63 |
-| 2 | 192.168.1.64 | 192.168.1.65 | 192.168.1.126 | 192.168.1.127 |
-| 3 | 192.168.1.128 | 192.168.1.129 | 192.168.1.190 | 192.168.1.191 |
-| 4 | 192.168.1.192 | 192.168.1.193 | 192.168.1.254 | 192.168.1.255 |
-
-### **Key Takeaways:**
-- **Each subnet gets 62 usable hosts** (excluding network/broadcast).
-- **Larger subnet mask (higher CIDR) → fewer hosts per subnet**.
-- **Smaller subnet mask (lower CIDR) → more hosts per subnet**.
+- `10.0.0.0`: Network address
+- `10.0.0.1`: Reserved by AWS for the VPC router
+- `10.0.0.2`: Reserved by AWS for mapping to Amazon-provided DNS
+- `10.0.0.3`: Reserved by AWS for future use
+- `10.0.0.255`: Network broadcast address (AWS does not support broadcast in a VPC, so this is reserved)
 
 ---
 
@@ -128,3 +123,4 @@ Each subnet has:
 - **Public vs Private IPs**: Private IPs require NAT to access the internet.
 - **CIDR**: Enables flexible subnetting and efficient IP usage.
 - **Subnetting**: Divides networks for better management and security.
+- **AWS Reserved IPs**: AWS reserves 5 IPs in each subnet that cannot be assigned to instances.
