@@ -154,12 +154,19 @@ A **loopback address** is a special IP address that is used to test network inte
 - In IPv4, **only 127.x.x.x is reserved** for loopback, while in IPv6, only **::1** is designated.
 
 
----
+### **AWS VPC Setup Steps**
 
-## **Final Summary**
-- **IPv4 vs. IPv6**: IPv6 has a larger address space, better security, and eliminates NAT.
-- **IP Classes**: A, B, and C for hosts; D for multicast; E for reserved.
-- **Public vs Private IPs**: Private IPs require NAT to access the internet.
-- **CIDR**: Enables flexible subnetting and efficient IP usage.
-- **Subnetting**: Divides networks for better management and security.
-- **AWS Reserved IPs**: AWS reserves 5 IPs in each subnet that cannot be assigned to instances.
+1. **Create a VPC** with address range `10.55.0.0/16` in region `us-east-1`.
+2. **Enable DNS Hostnames** on the VPC.
+3. **Create three subnets** with the following CIDR ranges:
+   - `10.55.1.0/24`
+   - `10.55.2.0/24`
+   - `10.55.3.0/24`
+4. **Enable Public IP** on subnets.
+5. **Create a routing table** and add the subnets to it.
+6. **Add routes** to the routing table.
+7. **Create a Linux server** and configure:
+   - Security Group (SG)
+   - Key Pair (for SSH access)
+8. **Connect to the Linux Server.**
+
