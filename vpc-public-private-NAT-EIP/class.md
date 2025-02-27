@@ -62,6 +62,7 @@ The following AWS setup will be created:
    - **Name:** `Public-Subnet`
    - **CIDR Block:** `10.0.1.0/24`
 3. Click **Create Subnet**.
+4. enable **Auto-assign IP settings**.
 
 #### Private Subnet
 1. Repeat the above steps.
