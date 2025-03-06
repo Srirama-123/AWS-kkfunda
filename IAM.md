@@ -36,15 +36,6 @@ AWS **Identity and Access Management (IAM)** is a service that helps manage acce
   - **AWS Managed Policies** (predefined by AWS).
   - **Customer Managed Policies** (created by users).
 
-### **5. IAM Identity Providers (IdPs)**
-- Used for federating AWS access with external authentication providers.
-- Supports **SAML 2.0, OpenID Connect (OIDC)**.
-
-### **6. IAM Security Features**
-- **MFA (Multi-Factor Authentication)** for additional security.
-- **IAM Access Analyzer** detects unintended access.
-- **IAM Credential Report** audits access keys, passwords, and MFA.
-- **Service Control Policies (SCPs)** (for AWS Organizations).
 
 ---
 
