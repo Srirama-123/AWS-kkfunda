@@ -67,9 +67,9 @@ CIDR replaces traditional class-based addressing by allowing more flexible subne
 
 | CIDR | Subnet Mask | Number of Hosts |
 |------|------------|---------------|
-| /8 | 255.0.0.0 | 16.7M |
-| /16 | 255.255.0.0 | 65K |
-| /24 | 255.255.255.0 | 256 |
+| /8 | 255.0.0.0 | 16.7M |        Means  32 - 8 = 24 
+| /16 | 255.255.0.0 | 65K |              32 - 16 = 16
+| /24 | 255.255.255.0 | 256 |            32 - 24 = 8 
 
 CIDR allows for:
 - **Efficient allocation** of IP addresses.
